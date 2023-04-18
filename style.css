@@ -56,9 +56,9 @@ nav {
 }
 
 nav,
-.nav-right,
-.nav-left,
-.nav-left ul {
+.nav2,
+.nav1,
+.nav1 ul {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -66,7 +66,7 @@ nav,
     max-height: 10vh;
 }
 
-.nav-left {
+.nav1 {
     width: 50%;
 }
 
@@ -131,6 +131,7 @@ button {
     font-weight: 800;
     cursor: pointer;
     transition: transform 0.4s ease-in-out;
+    justify-content:end;
 }
 
 button:hover,
@@ -138,7 +139,7 @@ a:hover {
     transform: scale(1.1);
 }
 
-.btn-secondary {
+.btn2 {
     background: transparent;
     border: 1px solid  #fafafa;
 }
@@ -152,6 +153,7 @@ a:hover {
 .cta button {
     border-radius: 420vh;
     font-size: 1.25rem;
+    display: flex;
 }
 
 .insurance-showup {
@@ -177,7 +179,7 @@ a:hover {
     height: 30%;
 }
 
-.primary {
+.btn {
     background:  #23a6f0;
 }
 
@@ -288,7 +290,7 @@ a:hover {
     transform: scale(1.1);
 }
 
-.newsletter-sub {
+.email-sub{
     display: flex;
     justify-content: space-between;
     padding: 2rem;
@@ -549,7 +551,58 @@ p[data-icon='email']::before {
     gap: 2rem;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 900px) {
+    
+    .pricing-container {
+        min-height: 210vh;
+    }
+    .pricing-card,
+    .pricing-card.active {
+        height: 32%;
+        width: 100%;
+    }
+    .contact-container,
+    .pricing-cards {
+        flex-wrap: wrap;
+    }
+    .nav-toggle {
+        display: inline-block;
+    }
+    .links {
+        display: none;
+    }
+    .container {
+        width: 85%;
+    }
+    .pricing-cards {
+        height: 180vh;
+    }
+    .contact {
+        min-height: 150vh;
+    }
+
+    .contact article {
+        gap: 0;
+    }
+    .contact-text {
+        width: 100%;
+        text-align: center;
+        gap: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    .appointment-form {
+        width: 100%;
+        margin-top: 30%;
+        grid-template-columns: auto;
+    }
+    .form h3 {
+        font-size: 3rem;
+    }
+}
+
+
+@media screen and (max-width: 750px) {
     html {
         font-size: 10px;
     }
@@ -563,14 +616,25 @@ p[data-icon='email']::before {
     .pricing-container {
         min-height: 210vh;
     }
-    .hero-cards,
+    
+    .insurance-showup,
     .adds-container,
     .industry-cards,
     .pricing-cards,
     .contact-container {
         flex-wrap: wrap;
     }
-
+    .logos,
+    .email-sub,
+    .btn,
+    .infor-cont-cta,
+    .copyright,
+    .inputs {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
     .form-img {
         background: url(images/contact-landscape.png);
     }
@@ -584,17 +648,7 @@ p[data-icon='email']::before {
         height: 32%;
         width: 100%;
     }
-
-    .logos,
-    .newsletter-sub,
-    .cta,
-    .infor-cont-cta,
-    .copyright,
-    .inputs {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
+    
 
     .footer-cont-cta {
         padding-block: 2rem;
@@ -644,7 +698,7 @@ p[data-icon='email']::before {
         margin-block: 2rem;
     }
 
-    .newsletter-sub h3 {
+    .email-sub h3 {
         font-size: 2rem;
         text-align: center;
     }
@@ -666,54 +720,5 @@ p[data-icon='email']::before {
     }
     .showup {
         align-items: center;
-    }
-}
-
-@media screen and (max-width: 900px) {
-    .nav-toggle {
-        display: inline-block;
-    }
-    .mobile-nav {
-        display: none;
-    }
-    .container {
-        width: 85%;
-    }
-    .pricing-cards {
-        height: 180vh;
-    }
-    .pricing-container {
-        min-height: 210vh;
-    }
-    .pricing-card,
-    .pricing-card.active {
-        height: 32%;
-        width: 100%;
-    }
-    .contact-container,
-    .pricing-cards {
-        flex-wrap: wrap;
-    }
-    .contact {
-        min-height: 150vh;
-    }
-
-    .contact article {
-        gap: 0;
-    }
-    .contact-text {
-        width: 100%;
-        text-align: center;
-        gap: 2rem;
-        padding-bottom: 2rem;
-    }
-
-    .appointment-form {
-        width: 100%;
-        margin-top: 30%;
-        grid-template-columns: auto;
-    }
-    .form h3 {
-        font-size: 3rem;
     }
 }
